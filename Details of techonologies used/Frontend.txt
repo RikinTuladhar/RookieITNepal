@@ -1,0 +1,17 @@
+# Zustand
+	- npm install zustand
+	- https://zustand.docs.pmnd.rs/getting-started/introduction
+# Zod
+	- npm i zod
+	- https://zod.dev/?id=table-of-contents
+# Jose
+	- npm i jose
+	- https://www.npmjs.com/package/jose
+
+# React Query 
+	- $ npm i react-query
+	- https://tanstack.com/query/v3/docs/framework/react/installation
+
+# React Hook Form
+	-npm install react-hook-form
+	-https://www.react-hook-form.com/
