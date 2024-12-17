@@ -15,3 +15,9 @@
 # React Hook Form
 	-npm install react-hook-form
 	-https://www.react-hook-form.com/
+
+# Aceternity
+	-https://ui.aceternity.com/
+
+# Shadcn
+	-https://ui.shadcn.com/
