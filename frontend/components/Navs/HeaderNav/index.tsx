@@ -8,7 +8,7 @@ const HeaderNav: FC<HeaderNavProps> = ({ value, href }) => {
   const route: string = usePathname();
   return (
     <div className=" h-full w-max relative">
-      <Link href={href} className="text-black font-medium">
+      <Link href={href} className="text-gray-200 font-semibold">
         {value}
       </Link>
       <div

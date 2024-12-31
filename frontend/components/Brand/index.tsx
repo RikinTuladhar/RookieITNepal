@@ -3,9 +3,9 @@ import Logo from '../Icons/Logo'
 
 const Brand = () => {
   return (
-    <div>
+    <div className='flex items-center gap-1'>
       <Logo />
-      <h1 className="text-black text-2xl font-bold">RookieITNepal</h1>
+      <h1 className="text-gray-400 text-xl font-bold"><span className='font-bold text-gray-300'>Rookie</span>IT</h1>
     </div>
   )
 }

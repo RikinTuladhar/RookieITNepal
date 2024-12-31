@@ -1,36 +1,88 @@
+'use client'
 import Link from 'next/link'
 import React from 'react'
 import Brand from '../Brand'
+import { useState } from 'react'
 import { HeaderNavs } from './constants'
 import HeaderNav from '../Navs/HeaderNav'
 import { HamburgerIcon } from '../Icons/HamburgerIcon'
+import { CloseIcon } from '../Icons/CloseIcon'
 
 const Header = () => {
+  const [isHamburgerOpen, setIsHamburgerOpen] = useState(false);
+
+  const toggleHamburger = () => {
+    setIsHamburgerOpen(!isHamburgerOpen);
+  };
+
   return (
-    <header className="w-full flex justify-center py-4 md:py-8 border-b-2 border-[#F3F3F3] relative">
-      <div className="w-full max-w-screen-xl mx-5 md:mx-20 flex items-center justify-between">
+    <header className="w-11/12 top-6 sm:w-5/6 md:w-3/4 lg:w-[90%] mx-auto flex  bg-[#26472B] rounded-3xl relative">
+
+
+      <div className="w-full max-w-screen-xl mx-5 md:mx-14 flex items-center px-4 py-3 md:px-0 md:py-3 justify-between">
         <Link href={"/"}>
           <Brand />
         </Link>
-        <nav className=" gap-14 hidden lg:flex">
+        <nav className="gap-14 hidden lg:flex text-xl">
           {HeaderNavs.map((el, _i) => (
             <HeaderNav key={_i} value={el.value} id={el.id} href={el.href} />
           ))}
         </nav>
-        <div className="flex gap-4">
-          <Link href={"/login"}>
-            <span className="text-[#FF4D00] font-bold">Login</span>
-          </Link>
-          <Link href={"/register"}>
-            <span className="text-[#FF4D00] font-bold">Register</span>
-          </Link>
-          <button className="lg:hidden">
+        <div className="flex items-center">
+          <div className="hidden lg:flex gap-4 md:gap-8">
+            <Link href={"/login"}>
+              <span className="text-[#f4f3f3] font-bold">Sign In</span>
+            </Link>
+            <Link href={"/register"}>
+              <span className="text-[#221e19] font-bold bg-slate-200  rounded-3xl p-3">Get Started</span>
+            </Link>
+          </div>
+          <button
+            className="lg:hidden  rounded-md bg-white "
+            onClick={toggleHamburger}
+          >
             <HamburgerIcon />
           </button>
         </div>
       </div>
+      {/* Sidebar Nav*/}
+      <div
+        className={`fixed top-0 left-0 h-full w-full bg-gray-950  transform transition-transform duration-1000 ${
+          isHamburgerOpen ? "translate-x-0" : "-translate-x-full"
+        }`}
+      >
+        <div className="p-4 relative">
+          <button
+            className="mb-4 absolute top-4 right-4 p-2 text-white"
+            onClick={toggleHamburger}
+          >
+            <CloseIcon />
+          </button>
+          <Link href={"/"}><Brand/></Link>
+          <nav className="pt-10 flex flex-col gap-6 ">
+  {HeaderNavs.map((el, _i) => (
+    <HeaderNav key={_i} value={el.value} id={el.id} href={el.href} />
+  ))}
+  <Link
+    href={"/login"}
+    onClick={toggleHamburger}
+    className="text-lg text-gray-200 border-b border-gray-300 hover:border-green-600 font-semibold transition-all duration-300"
+  >
+    Login
+  </Link>
+  <Link
+    href={"/register"}
+    onClick={toggleHamburger}
+    className="text-lg text-gray-200 border-b border-gray-300 hover:border-green-600 font-semibold transition-all duration-300"
+  >
+    Register
+  </Link>
+</nav>
+
+        </div>
+      </div>
     </header>
-  )
+  );
 }
 
 export default Header

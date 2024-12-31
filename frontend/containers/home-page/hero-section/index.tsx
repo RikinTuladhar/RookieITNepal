@@ -7,11 +7,11 @@ interface HeroSectionProps {}
 const HeroSection: FC<HeroSectionProps> = ({}) => {
   return (
     <section className="w-full flex justify-center">
-      <div className=" flex flex-col py-10 md:py-28 items-center  gap-8 md:gap-24 w-full max-w-screen-xl mx-5 md:mx-20">
+      <div className=" flex flex-col py-10 md:py-28 items-center  gap-10 md:gap-24 w-full max-w-screen-xl mx-5 md:mx-20">
         <div className="flex flex-col items-center w-full md:max-w-[800px] text-center gap-8">
           <div className="relative flex">
-            <h1 className="text-2xl md:text-6xl text-black font-bold">
-              Discover Furniture With High Quality Wood
+            <h1 className="text-4xl md:text-6xl uppercase  text-black font-bold">
+             Find your next talent here
             </h1>
           </div>
           <div>
