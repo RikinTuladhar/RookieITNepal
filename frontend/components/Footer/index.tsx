@@ -15,12 +15,11 @@ const Footer: FC<FooterProps> = ({}) => {
           </div>
           <div className="w-[327px] md:w-[505px] flex flex-col gap-3">
             <p className="text-black text-sm md:text-lg">
-              Lalasia is digital agency that help you make better experience
-              iaculis cras in.
+            Since 2025, RookieITNepal has connecting hospitality workers to thousands of business, private events and universities.
             </p>
             <p className="text-black font-bold text-sm md:text-base">Developed by</p>
-            <Link href={'https://www.merto.dev'} target="_blank" className="text-secondaryColor font-bold text-sm md:text-lg">Rikin Tuladhar</Link>
-            <Link href={'https://www.merto.dev'} target="_blank" className="text-secondaryColor font-bold text-sm md:text-lg">Deepson Shrestha</Link>
+            <Link href={'https://www.merto.dev'} target="_blank" className="text-gray-500 font-bold text-sm md:text-lg">Rikin Tuladhar</Link>
+            <Link href={'https://www.merto.dev'} target="_blank" className="text-gray-500 font-bold text-sm md:text-lg">Deepson Shrestha</Link>
           </div>
         </div>
         <div className="flex justify-between md:gap-28">

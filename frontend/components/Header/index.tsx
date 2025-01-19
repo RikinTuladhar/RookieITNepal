@@ -30,11 +30,15 @@ const Header = () => {
         </nav>
         <div className="flex items-center">
           <div className="hidden lg:flex gap-4 md:gap-8">
-            <Link href={"/login"}>
-              <span className="text-[#f4f3f3] font-bold">Sign In</span>
+            <Link href={"/signin"}>
+              <span className="text-[#f4f3f3] font-bold hover:text-green-400">Sign In</span>
             </Link>
-            <Link href={"/register"}>
-              <span className="text-[#221e19] font-bold bg-slate-200  rounded-3xl p-3">Get Started</span>
+            <Link href={"/signup"}>
+            <span 
+  className="text-white font-bold bg-gradient-to-r from-blue-500 to-green-500 hover:from-green-500 hover:to-blue-500 rounded-3xl p-3 shadow-md transition-all duration-300 transform hover:scale-105">
+  Get Started
+</span>
+
             </Link>
           </div>
           <button
@@ -47,7 +51,7 @@ const Header = () => {
       </div>
       {/* Sidebar Nav*/}
       <div
-        className={`fixed top-0 left-0 h-full w-full bg-gray-950  transform transition-transform duration-1000 ${
+        className={`fixed top-0 left-0 h-full w-full bg-gray-950 z-50 transform transition-transform duration-1000 ${
           isHamburgerOpen ? "translate-x-0" : "-translate-x-full"
         }`}
       >
@@ -64,14 +68,14 @@ const Header = () => {
     <HeaderNav key={_i} value={el.value} id={el.id} href={el.href} />
   ))}
   <Link
-    href={"/login"}
+    href={"/signin"}
     onClick={toggleHamburger}
     className="text-lg text-gray-200 border-b border-gray-300 hover:border-green-600 font-semibold transition-all duration-300"
   >
     Login
   </Link>
   <Link
-    href={"/register"}
+    href={"/signup"}
     onClick={toggleHamburger}
     className="text-lg text-gray-200 border-b border-gray-300 hover:border-green-600 font-semibold transition-all duration-300"
   >
