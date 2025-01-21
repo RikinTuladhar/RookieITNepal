@@ -3,12 +3,14 @@
 import { IoIosNotifications } from "react-icons/io";
 import { IoBookmarkSharp } from "react-icons/io5";
 import { BsBriefcase } from "react-icons/bs";
+import { RxCross2 } from "react-icons/rx";
+import { AiOutlineClockCircle } from "react-icons/ai";
 
 export default function Dashboard() {
   return (
     <div className="bg-gray-100 min-h-screen p-4">
       {/* Header Section */}
-      <div className="flex flex-col sm:flex-row justify-between items-center bg-white p-4 shadow-md rounded-lg">
+      <div className="flex flex-col sm:flex-row justify-between items-center bg-white p-4  shadow-md rounded-lg">
         {/* Notification Icon */}
         <div className="relative cursor-pointer">
           <span className="absolute -top-1 -right-1 bg-red-500 text-white text-xs w-5 h-5 flex items-center justify-center rounded-full">
@@ -43,7 +45,7 @@ export default function Dashboard() {
       {/* Dashboard Cards */}
       <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
         {/* Job Applications */}
-        <div className="bg-white p-2 rounded-lg shadow hover:shadow-lg transition-all flex items-center justify-between">
+        <div className="bg-white p-6 rounded-lg shadow hover:shadow-lg transition-all flex items-center justify-between">
           {/* Number Display */}
           <div className=" flex flex-col gap-3">
             <span className="text-2xl font-bold text-gray-700">12</span>
@@ -73,11 +75,11 @@ export default function Dashboard() {
           {/* Number Display */}
           <div className=" flex flex-col gap-3">
             <span className="text-2xl font-bold text-gray-700">12</span>
-            <h2 className="text-xl">Bookmarks</h2>
+            <h2 className="text-xl">Rejected</h2>
           </div>
           {/* Icon */}
-          <div className="text-green-500 text-4xl ">
-            <IoBookmarkSharp />
+          <div className="text-red-500 text-4xl ">
+            <RxCross2 />
           </div>
         </div>
 
@@ -86,11 +88,11 @@ export default function Dashboard() {
           {/* Number Display */}
           <div className=" flex flex-col gap-3">
             <span className="text-2xl font-bold text-gray-700">12</span>
-            <h2 className="text-xl">Bookmarks</h2>
+            <h2 className="text-xl">Alerts</h2>
           </div>
           {/* Icon */}
-          <div className="text-green-500 text-4xl ">
-            <IoBookmarkSharp />
+          <div className="text-yellow-500 text-4xl ">
+            <AiOutlineClockCircle />
           </div>
         </div>
       </div>

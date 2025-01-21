@@ -4,6 +4,12 @@ import Brand from "@/components/Brand";
 import Link from "next/link";
 import { useState } from "react";
 import { HiMenu, HiX } from "react-icons/hi"; // HiX for close button
+import {
+  HiOutlineHome,
+  HiOutlineUser,
+  HiOutlineDocumentText,
+  HiOutlineBookmark,
+} from "react-icons/hi"; // Icons for the menu
 
 const SidePannel = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -41,35 +47,27 @@ const SidePannel = () => {
 
           <Brand />
           <ul>
-            <li className="mb-4">
-              <Link
-                href={"/rookies/"}
-                className="block p-2 hover:bg-green-200 text-gray-400 hover:text-green-600 rounded"
-              >
+            <li className="mb-4 flex items-center  hover:bg-green-200 text-gray-400 hover:text-green-600 rounded">
+              <HiOutlineHome className="mr-3" />
+              <Link href={"/rookies/"} className="block p-2">
                 Dashboard
               </Link>
             </li>
-            <li className="mb-4">
-              <Link
-                href={"/rookies/job-listings"}
-                className="block p-2 hover:bg-green-200 text-gray-400 hover:text-green-600 rounded"
-              >
-                Job Listings
+            <li className="mb-4 flex items-center  hover:bg-green-200 text-gray-400 hover:text-green-600  rounded">
+              <HiOutlineUser className="mr-3" />
+              <Link href={"/rookies/profile"} className="block p-2">
+                Profile
               </Link>
             </li>
-            <li className="mb-4">
-              <Link
-                href={"/rookies/applications"}
-                className="block p-2 hover:bg-green-200 text-gray-400 hover:text-green-600 rounded"
-              >
+            <li className="mb-4 flex items-center  hover:bg-green-200 text-gray-400 hover:text-green-600  rounded">
+              <HiOutlineDocumentText className="mr-3" />
+              <Link href={"/rookies/application"} className="block p-2 ">
                 Applications
               </Link>
             </li>
-            <li>
-              <Link
-                href={"/rookies/bookmark"}
-                className="block p-2 hover:bg-green-200 text-gray-400 hover:text-green-600 rounded"
-              >
+            <li className="flex items-center  hover:bg-green-200 text-gray-400 hover:text-green-600  rounded">
+              <HiOutlineBookmark className="mr-3" />
+              <Link href={"/rookies/bookmark"} className="block p-2">
                 Bookmarks
               </Link>
             </li>
