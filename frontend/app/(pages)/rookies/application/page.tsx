@@ -83,7 +83,7 @@ const Application = () => {
         ))}
       </div>
       <div className="overflow-x-auto rounded-xl shadow-lg">
-        <table className="min-w-full bg-white border border-gray-200 rounded-xl overflow-hidden">
+        <table className="min-w-full bg-white hover:bg-gray-200 cursor-pointer border border-gray-200 rounded-xl overflow-hidden">
           <thead className="bg-gray-100">
             <tr className="text-left text-gray-700 text-sm sm:text-base">
               <th className="px-6 py-4 border-b border-gray-300 font-semibold">
